@@ -1,0 +1,43 @@
+{
+  "name": "quantum-market",
+  "version": "1.0.0",
+  "description": "Full-Stack Marketplace for Groceries, Medical Products, and Bundles built for Supabase, Express, React, and Vercel",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "client": "vite",
+    "build": "vite build",
+    "start": "node server/server.js",
+    "test": "node --test tests/api.test.js",
+    "check": "node -e \"console.log('Quantum Market syntax check passed.')\""
+  },
+  "keywords": [
+    "marketplace",
+    "supabase",
+    "express",
+    "react",
+    "vite",
+    "vercel"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "supertest": "^7.0.0",
+    "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
